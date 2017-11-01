@@ -1,0 +1,7 @@
+<%= @sub.title %>
+
+<% @sub.posts.each do |p| %>
+  <%= link_to p.title, post_url(p)%>
+<% end %>
+
+<%= button_to "Create Post", new_post_url, method: :get %>
